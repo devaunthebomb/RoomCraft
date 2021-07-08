@@ -1,17 +1,59 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
+    <div id="HomeTitle">
+      Home
+    </div>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" class="Background">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
+      <ion-title size="large">Home</ion-title>
     </ion-toolbar>
   </ion-header>
+  <section class="full-width">
+    <ion-button expand="full" color="secondary">Start Desiging</ion-button>
+  </section>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <section class="full-width">
+    <ion-button expand="full" color="secondary">Community</ion-button>
+  </section>
+  <!-- <app-explore-container name="Tab 1 page"></app-explore-container> -->
 </ion-content>
+
+<style>
+  #HomeTitle{
+    font-family: SeoulHangang CBL;
+    color: ffffff;
+    text-align: center;
+};  
+ .Background{
+   background-color: #7E60F3;
+ }
+</style>
+
+<style>
+  :root {
+    --ion-safe-area-top: 20px;
+    --ion-safe-area-bottom: 22px;
+  }
+
+  header {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    margin-bottom: 1.25em;
+    text-transform: uppercase;
+  }
+
+  section {
+    margin-top: 1em;
+    margin-bottom: 2.5em;
+  }
+
+  section:not(.full-width),
+  .full-width > header {
+    padding: 0 10px;
+  }
+</style>
