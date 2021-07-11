@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { DataService } from '../services/data.service';
+import { Project } from '../services/project';
 
 @Component({
   selector: 'app-tab1',
@@ -6,7 +9,13 @@ import { Component } from '@angular/core';
   styleUrls: ['tab1.page.scss']
 })
 export class Tab1Page {
-
-  constructor() {}
-
+  projectsArr : Project[] = [];
+  constructor(private dataService : DataService) {}
+  ngOnInit() {
+    this.dataService.getProjects().subscribe((data: Project[]) =>
+    {
+      console.log(data);
+      this.projectsArr = data;
+    });
+}
 }

@@ -9,27 +9,47 @@
 <ion-content [fullscreen]="true" class="Background">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Home</ion-title>
+      <ion-title size="large"></ion-title>
     </ion-toolbar>
   </ion-header>
   <section class="full-width">
-    <ion-button expand="full" color="tertiary">Start Desiging</ion-button>
+    <ion-button expand="full" color="tertiary" [routerLink]="['/tabs/tab1/start']">Start Desiging</ion-button>
   </section>
- 
+
   <section class="full-width">
-    <ion-button expand="full" color="tertiary">Community</ion-button>
+    <ion-button expand="full" color="tertiary" [routerLink]="['/tabs/tab1/community']">Community</ion-button>
   </section>
+
+  <section class="full-width">
+    <ion-button expand="full" color="tertiary" [routerLink]="['/tabs/tab1/saved designs']">Saved Designs</ion-button>
+  </section>
+     <ion-list>
+      <ion-list-header>
+        Saved Projetcs
+      </ion-list-header>
+
+      <ion-card *ngFor = "let project of projectsArr">
+        <img src={{project.thumbnailUrl}} />
+        <ion-card-header>
+          <ion-card-title>{{project.projectName}}</ion-card-title>
+        </ion-card-header>
+      </ion-card>
+    </ion-list>
+    <!-- <app-explore-container name="Tab 3 page"></app-explore-container> -->
   <!-- <app-explore-container name="Tab 1 page"></app-explore-container> -->
 </ion-content>
-
 <style>
   #HomeTitle{
     font-family: SeoulHangang CBL;
     color: ffffff;
     text-align: center;
+    font-size: 36px;
 };  
 
-
+.button{
+  background-color: #7E60F3;
+  size: 1000000px;
+}
 
 </style>
 
@@ -55,5 +75,8 @@
   section:not(.full-width),
   .full-width > header {
     padding: 0 10px;
+  }
+  #DesigingButton{
+    text-align: right;
   }
 </style>

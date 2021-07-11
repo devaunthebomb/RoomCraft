@@ -1,0 +1,70 @@
+{
+    "horizontalSpan": 100,
+    "verticalSpan": 50,
+    "items":[{
+        "itemId": "74b50e65-47e8-4cac-bdad-76a48c69862c",
+        "thumbnailUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpICHzSJhWl_2jKytW2jANG-HsyJimmJfmYg5U_lkbiAG9E1YaQWeiBFLcjF6pPkcy6Ar2V5h6&usqp=CAc",
+        "itemName": "DevaunDesk",
+        "dimensions": {
+            "x":10,
+            "y":10
+        }
+    },
+    {
+        "itemId": "e1142664-b77f-4064-829e-10e1df0c85f5",
+        "thumbnailUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeY0NW5oZsphJD8IimORw-ps5-tCKEI4LYfLyZrRqKzOClFzSGZdDUjJdKPQ&usqp=CAc",
+        "itemName": "MarcusMatress",
+        "dimensions": {
+            "x":10,
+            "y":10
+        }
+    },{
+        "itemId": "c6005bdb-2ab6-4fb7-a59e-9bebd52b57d9",
+        "thumbnailUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQfbEoWIZkRiyT9_KrvS6bhMeawrLt_riEw1hKkJVpy0yxeyRNlcAFu5uCaozBoClqcVLi9Bg&usqp=CAc",
+        "itemName": "string",
+        "dimensions": {
+            "x":10,
+            "y":10
+        }
+    },{
+        "itemId": "16c32573-30ca-43ea-ba9c-ce7cc795082c",
+        "thumbnailUrl": "url",
+        "itemName": "string",
+        "dimensions": {
+            "x":10,
+            "y":10
+        }
+    },{
+        "itemId": "41765c15-3d98-43c3-bff0-f3d2fb8a0b36",
+        "thumbnailUrl": "url",
+        "itemName": "string",
+        "dimensions": {
+            "x":10,
+            "y":10
+        }
+    },{
+        "itemId": "f1c538c1-436a-4888-b80b-cb380e99fcff",
+        "thumbnailUrl": "url",
+        "itemName": "string",
+        "dimensions": {
+            "x":10,
+            "y":10
+        }
+    },{
+        "itemId": "59236743-a2f6-46d9-a504-b0586754e2d5",
+        "thumbnailUrl": "url",
+        "itemName": "string",
+        "dimensions": {
+            "x":10,
+            "y":10
+        }
+    },{
+        "itemId": "ff80fe49-dbfd-45b1-86a0-2f9c2dda412b",
+        "thumbnailUrl": "url",
+        "itemName": "string",
+        "dimensions": {
+            "x":10,
+            "y":10
+        }
+    }]
+}
