@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <div id="HomeTitle">
-      Home
+    <div id="Title">
+      RoomCraft
     </div>
   </ion-toolbar>
 </ion-header>
@@ -12,19 +12,8 @@
       <ion-title size="large"></ion-title>
     </ion-toolbar>
   </ion-header>
-  <section class="full-width">
-    <ion-button expand="full" color="tertiary" [routerLink]="['/tabs/tab1/start']">Start Desiging</ion-button>
-  </section>
-
-  <section class="full-width">
-    <ion-button expand="full" color="tertiary" [routerLink]="['/tabs/tab1/community']">Community</ion-button>
-  </section>
-
-  <section class="full-width">
-    <ion-button expand="full" color="tertiary" [routerLink]="['/tabs/tab1/saved designs']">Saved Designs</ion-button>
-  </section>
      <ion-list>
-      <ion-list-header>
+      <ion-list-header id="Title">
         Saved Projetcs
       </ion-list-header>
 
@@ -39,11 +28,11 @@
   <!-- <app-explore-container name="Tab 1 page"></app-explore-container> -->
 </ion-content>
 <style>
-  #HomeTitle{
-    font-family: SeoulHangang CBL;
+  #Title{
+    font-family: ARVO;
     color: ffffff;
     text-align: center;
-    font-size: 36px;
+    font-size: 30px;
 };  
 
 .button{

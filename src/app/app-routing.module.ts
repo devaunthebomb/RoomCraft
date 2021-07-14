@@ -8,10 +8,6 @@ const routes: Routes = [
     
   },
   {
-    path: 'saved-designs',
-    loadChildren: () => import('./saved-designs/saved-designs.module').then( m => m.SavedDesignsPageModule)
-  },
-  {
     path: 'start',
     loadChildren: () => import('./start/start.module').then( m => m.StartPageModule)
   }
