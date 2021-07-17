@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { PhotoService } from '../services/photo.service';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-tab2',
   templateUrl: 'tab2.page.html',
@@ -8,12 +8,10 @@ import { PhotoService } from '../services/photo.service';
 })
 
 export class Tab2Page {
-
   constructor(public photoService: PhotoService) { }
   addPhotoToGallery() {
     this.photoService.addNewToGallery();
     
   } 
 }
-
 

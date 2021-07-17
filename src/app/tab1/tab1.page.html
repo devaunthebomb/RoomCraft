@@ -17,13 +17,14 @@
         Saved Projetcs
       </ion-list-header>
 
-      <ion-card *ngFor = "let project of projectsArr">
+      <ion-card *ngFor = "let project of projectsArr" >
         <img src={{project.thumbnailUrl}} />
         <ion-card-header>
           <ion-card-title>{{project.projectName}}</ion-card-title>
         </ion-card-header>
       </ion-card>
     </ion-list>
+        
     <!-- <app-explore-container name="Tab 3 page"></app-explore-container> -->
   <!-- <app-explore-container name="Tab 1 page"></app-explore-container> -->
 </ion-content>
