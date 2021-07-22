@@ -1,10 +1,12 @@
-var express = require('express');
-var bodyParser = require('body-parser');
-var logger = require('morgan');
-var methodOverride = require('method-override')
-var cors = require('cors');
+const express = require('express');
+const bodyParser = require('body-parser');
+const logger = require('morgan');
+const methodOverride = require('method-override')
+const cors = require('cors');
 
 var app = express();
+
+
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(methodOverride());

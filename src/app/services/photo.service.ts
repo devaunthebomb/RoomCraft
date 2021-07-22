@@ -27,7 +27,7 @@ export class PhotoService {
       filepath: 'string coming soon',
       webViewPath: capturedPhoto.webPath
     })
-
+    console.log(this.photos[0].webViewPath)
 
   }
 }

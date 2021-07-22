@@ -6,11 +6,16 @@
   </ion-toolbar>
 </ion-header>
 
+<!--Allows you to enter name of project-->
 <ion-content [fullscreen]="true">
   <ion-item>
     <ion-label position="floating">Project Name</ion-label>
     <ion-textarea [(ngModel)] = "currentInput" placeholder="text here"></ion-textarea>
   </ion-item>
+
+  <section>
+  <ion-button color="success" (click)="moveToHome()">Save</ion-button>
+  </section>
 
   <!-- <section>
     <ion-button color="success">Complete</ion-button>
@@ -25,7 +30,7 @@
       </ion-col>
     </ion-row>
   </ion-grid>
-  <!--Takes picture and adds to the phot gallery-->
+  <!--Takes picture and adds to the photo gallery-->
   <ion-fab vertical="bottom" horizontal="center" slot="fixed">
     <ion-fab-button (click)="addPhotoToGallery()">
       <ion-icon name="camera"></ion-icon>

@@ -10,6 +10,7 @@ import { Project } from '../services/project';
 })
 export class Tab1Page {
   projectsArr : Project[] = [];
+  test: any = []
   constructor(private dataService : DataService) {}
   ngOnInit() {
     this.dataService.getProjects().subscribe((data: Project[]) =>
@@ -17,5 +18,7 @@ export class Tab1Page {
       console.log(data);
       this.projectsArr = data;
     });
+    this.test = this.dataService.addingPhotos
+    // console.log(this.test[0].webViewPath)
 }
 }
