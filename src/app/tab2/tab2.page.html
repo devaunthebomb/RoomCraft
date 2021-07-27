@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title id="Title">
-      RoomCraft
+    <ion-title id="Title" >
+      RoomCraft - {{currentInput}}
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -10,7 +10,7 @@
 <ion-content [fullscreen]="true">
   <ion-item>
     <ion-label position="floating">Project Name</ion-label>
-    <ion-textarea [(ngModel)] = "currentInput" placeholder="text here"></ion-textarea>
+    <ion-textarea [(ngModel)] = "currentInput" placeholder="type here"></ion-textarea>
   </ion-item>
 
   <section>

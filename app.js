@@ -4,7 +4,7 @@ const logger = require('morgan');
 const methodOverride = require('method-override')
 const cors = require('cors');
 
-var app = express();
+const app = express();
 
 
 app.use(logger('dev'));

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { DataService } from '../services/data.service';
-import { Project } from '../services/project';
+import { Project } from '../services/project'
 
 @Component({
   selector: 'app-tab1',
@@ -10,7 +10,7 @@ import { Project } from '../services/project';
 })
 export class Tab1Page {
   projectsArr : Project[] = [];
-  test: any = []
+  // test: any = []
   constructor(private dataService : DataService) {}
   ngOnInit() {
     this.dataService.getProjects().subscribe((data: Project[]) =>
@@ -18,7 +18,7 @@ export class Tab1Page {
       console.log(data);
       this.projectsArr = data;
     });
-    this.test = this.dataService.addingPhotos
+    // this.test = this.dataService.addingPhotos
     // console.log(this.test[0].webViewPath)
 }
 }
