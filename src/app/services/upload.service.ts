@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject } from 'rxjs';
 
 const baseUrl = "http://localhost:3000";
-
+const mockUrl = "http://localhost:8080";
 @Injectable({
   providedIn: 'root'
 })
@@ -14,8 +14,9 @@ export class UploadService {
   constructor(public http: HttpClient) { }
 
   getAllProjects(){
-    return this.http.get(`${baseUrl}/projects/get-projects`)
+    return this.http.get(`${baseUrl}/projects/get-projects`);
   }
+
 
   populateProjects(){
     this.getAllProjects().subscribe((data: any)=>{
@@ -25,4 +26,9 @@ export class UploadService {
       console.log(err);
     });
   }
+
+  getMockProjects(){
+    return this.http.get("http://localhost:8080/mockProjects")
+  }
+
 }

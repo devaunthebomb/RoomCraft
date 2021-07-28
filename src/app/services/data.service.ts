@@ -15,7 +15,7 @@ export class DataService {
   }
 
   getProjects(){
-    return this.http.get("http://localhost:8080/projects")
+    return this.http.get("http://localhost:8080/mockProjects")
   }
 
   getItems(){
