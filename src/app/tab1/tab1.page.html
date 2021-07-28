@@ -12,26 +12,18 @@
       <ion-title size="large"></ion-title>
     </ion-toolbar>
   </ion-header>
-     <ion-list>
+     <ion-list *ngIf="display != undefined">
       <ion-list-header id="Title">
         Saved Projetcs
       </ion-list-header>
 
-      <ion-card *ngFor = "let project of projectsArr" >
-        <img src={{project.thumbnailUrl}} />
-        
-        <ion-card-header>
-          <ion-card-title>{{project.projectName}}</ion-card-title>
-        </ion-card-header>
-      </ion-card>
-
-      <ion-card *ngFor = "let photo of test" >
-        <img src={{photo.webViewPath}} />
+      <ion-card *ngFor = "let photo of display.documents" >
+        <img src={{photo.imageUrl}} />
         
         <ion-card-header>
           <ion-card-title>test</ion-card-title>
         </ion-card-header>
-      </ion-card>
+      </ion-card> 
 
     </ion-list>
         
