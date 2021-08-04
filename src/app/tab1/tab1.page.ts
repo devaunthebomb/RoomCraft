@@ -4,6 +4,7 @@ import { DataService } from '../services/data.service';
 import { Project } from '../services/project'
 import { UploadService } from '../services/upload.service'
 import { Subscription } from 'rxjs'
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-tab1',
@@ -14,10 +15,14 @@ export class Tab1Page {
   projectsArr : Project[] = [];
   // public projectsList:any[] = [];
   // subcription: Subscription;
-  test: any = []
+  // test: any = []
   
+  newProject(){
+    this.router.navigateByUrl("/tabs/tab2")
+  }
+
   display: any;
-  constructor(private dataService : DataService, private uploadService: UploadService) {
+  constructor(private dataService : DataService, private uploadService: UploadService, private router: Router) {
     // console.log(this.uploadService.listOfProjectsObs)
     // this.subcription = this.uploadService.listOfProjectsObs.subscribe((data)=>{
     //   this.projectsList.push(data);
@@ -30,6 +35,8 @@ export class Tab1Page {
        this.display = data;
        console.log(this.display.documents)
      })
+
+     
 
 
     

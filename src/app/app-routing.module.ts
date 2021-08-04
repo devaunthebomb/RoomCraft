@@ -10,6 +10,10 @@ const routes: Routes = [
   {
     path: 'start',
     loadChildren: () => import('./start/start.module').then( m => m.StartPageModule)
+  },
+  {
+    path: 'checkout',
+    loadChildren: () => import('./tab3/checkout/checkout.module').then( m => m.CheckoutPageModule)
   }
 ];
 @NgModule({

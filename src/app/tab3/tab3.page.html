@@ -5,7 +5,6 @@
     </ion-title>
   </ion-toolbar>
 </ion-header>
-
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
@@ -14,9 +13,28 @@
   </ion-header>
 
   <ion-searchbar position="floating"></ion-searchbar>
-    
+  <!-- <ion-icon name="bed-outline" size="large"></ion-icon> -->
+  <div>
+  <ion-title>
+    Amazon
+    <ion-icon name="logo-amazon"></ion-icon>
+  </ion-title>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+  <ion-card (click)="move()" >
+    <img class="image" src="http://yolisgreenliving.com/wp-content/uploads/2015/12/No-Furniture_bedroom.jpg"/>
+  </ion-card>
+  </div>
+
+
+  <div>
+  <ion-title>
+    Target
+  </ion-title>
+  <ion-card >
+    <img class="image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRELOQR3-iH-jR4R1pFWOaLU8O1hrFAPYpI4g&usqp=CAU"/>
+  </ion-card>
+  </div>
+  <!-- <app-explore-container name="Tab 3 page"></app-explore-container> -->
 </ion-content>
 
 <style>
@@ -25,5 +43,6 @@
     color: ffffff;
     text-align: center;
     font-size: 30px;
-};  
+};
+
 </style>

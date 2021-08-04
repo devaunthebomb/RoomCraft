@@ -1,7 +1,10 @@
 import { Component } from '@angular/core';
 import { PhotoService } from '../services/photo.service';
 import {DataService} from '../services/data.service'
- 
+// import { FileTransfer, FileUploadOptions, FileTransferObject } from '@ionic-native/file-transfer/ngx';
+// import { File } from '@ionic-native/file';
+
+
 import { Router } from '@angular/router';
 import { CameraPhoto } from '@capacitor/camera';
 

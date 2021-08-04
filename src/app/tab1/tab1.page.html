@@ -6,7 +6,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true" class="Background">
+<ion-content [fullscreen]="true" >
   <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large"></ion-title>
@@ -16,19 +16,25 @@
       <ion-list-header id="Title">
         Saved Projetcs
       </ion-list-header>
-
+      
+ 
       <ion-card *ngFor = "let photo of display.documents" >
         <img src={{photo.imageUrl}} />
         
         <ion-card-header>
-          <ion-card-title>test</ion-card-title>
+          <ion-card-title>{{photo.projectName}}</ion-card-title>
         </ion-card-header>
       </ion-card> 
+ 
 
     </ion-list>
+
+    <section>
+      <ion-button (click)="newProject()" expand="round">New Project</ion-button>
+    </section>
+
+
         
-    <!-- <app-explore-container name="Tab 3 page"></app-explore-container> -->
-  <!-- <app-explore-container name="Tab 1 page"></app-explore-container> -->
 </ion-content>
 <style>
   #Title{
