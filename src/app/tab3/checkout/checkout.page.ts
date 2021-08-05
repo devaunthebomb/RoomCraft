@@ -16,7 +16,7 @@ export class CheckoutPage implements OnInit {
   async openToast() {
     const toast = this.toastCrtl.create({
       message: "Item Purchased",
-      duration: 4000
+      duration: 2000
     });
     (await toast).present()
   }

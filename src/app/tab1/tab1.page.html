@@ -12,13 +12,13 @@
       <ion-title size="large"></ion-title>
     </ion-toolbar>
   </ion-header>
-     <ion-list *ngIf="display != undefined">
+     <ion-list >
       <ion-list-header id="Title">
         Saved Projetcs
       </ion-list-header>
       
  
-      <ion-card *ngFor = "let photo of display.documents" >
+      <ion-card *ngFor="let photo of projectsList" >
         <img src={{photo.imageUrl}} />
         
         <ion-card-header>
@@ -30,8 +30,28 @@
     </ion-list>
 
     <section>
-      <ion-button (click)="newProject()" expand="round">New Project</ion-button>
+      <ion-button (click)="readFile()" expand="round">New Project</ion-button>
     </section>
+
+    <form [formGroup]="form">
+      <label> Name </label>
+      <ion-input
+        type="text"
+        formControlName="name"
+        placeholder="Enter Project Title"
+      ></ion-input>
+      <br />
+      <label for="avatar">Choose a profile picture:</label>
+      <ion-input
+        type="file"
+        id="avatar"
+        name="avatar"
+        accept="image/*"
+        (change)="readFile($event)"
+      ></ion-input>
+      <br />
+      <ion-button type="submit" (click)="uploadFile()">Save</ion-button>
+    </form>
 
 
         
