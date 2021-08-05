@@ -8,6 +8,8 @@ import { Router } from '@angular/router';
 import { FormBuilder, Validators, FormGroup, FormControl, FormArray } from '@angular/forms'
 import { Platform } from '@ionic/angular';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { ModalController } from '@ionic/angular';
+
 
 
 
@@ -42,7 +44,7 @@ export class Tab1Page implements OnInit {
   }
 
   display: any;
-  constructor(private dataService : DataService, private uploadService: UploadService, private router: Router, public formbuilder: FormBuilder, private platform: Platform) {
+  constructor(public modalCtrl: ModalController, private dataService : DataService, private uploadService: UploadService, private router: Router, public formbuilder: FormBuilder, private platform: Platform) {
     // console.log(this.uploadService.listOfProjectsObs)
     // this.subcription = this.uploadService.listOfProjectsObs.subscribe((data)=>{
     //   this.projectsList.push(data);
@@ -111,6 +113,16 @@ export class Tab1Page implements OnInit {
         console.log(err);
       })
     }
+
+
+
+    dismiss(){
+      this.modalCtrl.dismiss();
+    }
+
+    }
+
+    
     
 
 
@@ -126,7 +138,7 @@ export class Tab1Page implements OnInit {
 //     });
 //     this.test = this.dataService.addingPhotos
 //     console.log(this.test[0].webViewPath)
-}
+
 
 // listenToNewProjects(){
 //    this.uploadService.populateProjects();

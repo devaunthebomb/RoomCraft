@@ -8,10 +8,10 @@
 
 <!--Allows you to enter name of project-->
 <ion-content [fullscreen]="true">
-  <ion-item>
+  <!-- <ion-item>
     <ion-label position="floating">Project Name</ion-label>
     <ion-textarea [(ngModel)] = "currentInput" placeholder="type here"></ion-textarea>
-  </ion-item>
+  </ion-item> -->
 
 <!-- 
   <section>
@@ -26,8 +26,13 @@
   <ion-grid>
     <ion-row>
       <ion-col *ngFor='let photo of photoService.photos'>
-        <ion-img [src]='photo.webViewPath' class="Photo">
-        </ion-img>
+        <div class="picture-container">
+          <div class="example-box" cdkDrag>
+            <div class="one" [innerHtml]="htmlToAdd"></div>
+          </div>
+          <ion-img [src]='photo.webViewPath' class="Photo">
+          </ion-img>
+        </div>
       </ion-col>
     </ion-row>
   </ion-grid>
@@ -38,7 +43,37 @@
     </ion-fab-button>
   </ion-fab>
  
-  <ion-icon size="large" class="thing" name="search-outline"></ion-icon>
+  <!-- <ion-icon size="large" class="icon" name="search-outline"></ion-icon>
+  <ion-icon size="large" class="icon" (click)="showConfirm()" name="home-outline"></ion-icon> -->
+
+   <br>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-card class="card">
+          <img src="../../assets/couch2.png" />
+          <ion-card-header>
+            <ion-button (click)="addCouch()">Add Item</ion-button>
+          </ion-card-header>
+          <ion-card-content>
+            Couch
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card>
+          <img src="./madison.jpg" />
+          <ion-card-header>
+            <ion-card-title>Items</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+           Lamp
+          </ion-card-content>
+        </ion-card>      
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
 
 </ion-content>
 

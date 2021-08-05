@@ -14,7 +14,7 @@
   </ion-header>
      <ion-list >
       <ion-list-header id="Title">
-        Saved Projetcs
+        Saved Projects
       </ion-list-header>
       
  
@@ -30,10 +30,10 @@
     </ion-list>
 
     <section>
-      <ion-button (click)="readFile()" expand="round">New Project</ion-button>
+      <ion-button id="button" (click)="newProject()" expand="round">New Project</ion-button>
     </section>
 
-    <form [formGroup]="form">
+    <!-- <form [formGroup]="form">
       <label> Name </label>
       <ion-input
         type="text"
@@ -51,7 +51,7 @@
       ></ion-input>
       <br />
       <ion-button type="submit" (click)="uploadFile()">Save</ion-button>
-    </form>
+    </form> -->
 
 
         
