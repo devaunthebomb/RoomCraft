@@ -13,6 +13,17 @@
     <ion-textarea [(ngModel)] = "currentInput" placeholder="type here"></ion-textarea>
   </ion-item> -->
 
+
+<div class="button-container">
+  <div id="camera-button">
+  <ion-button (click)="addPhotoToGallery()"><ion-icon style="margin-right: 5%;"name="camera"></ion-icon> Take Photo</ion-button>
+  </div>
+  <div id="file-button">
+  <ion-button><ion-icon style="margin-right: 7%;"name="images"></ion-icon>Add File</ion-button>
+  </div>
+</div>
+
+
 <!-- 
   <section>
   <ion-button color="success" (click)="moveToHome()">Save</ion-button>
@@ -27,52 +38,84 @@
     <ion-row>
       <ion-col *ngFor='let photo of photoService.photos'>
         <div class="picture-container">
-          <div class="example-box" cdkDrag>
-            <div class="one" [innerHtml]="htmlToAdd"></div>
-          </div>
-          <ion-img [src]='photo.webViewPath' class="Photo">
+            <!-- <div class="one" [innerHtml]="htmlToAdd"></div>
+          </div> --> 
+          <div class="image-container">
+          <ion-img id="myImage" [src]='photo.webViewPath' class="Photo">
           </ion-img>
+          </div>
         </div>
       </ion-col>
     </ion-row>
   </ion-grid>
   <!--Takes picture and adds to the photo gallery-->
-  <ion-fab vertical="bottom" horizontal="center" slot="fixed">
+  <!-- <ion-fab vertical="bottom" horizontal="center" slot="fixed">
     <ion-fab-button (click)="addPhotoToGallery()">
       <ion-icon name="camera"></ion-icon>
     </ion-fab-button>
-  </ion-fab>
- 
-  <!-- <ion-icon size="large" class="icon" name="search-outline"></ion-icon>
-  <ion-icon size="large" class="icon" (click)="showConfirm()" name="home-outline"></ion-icon> -->
+  </ion-fab> -->
+
+
 
    <br>
   <ion-grid>
     <ion-row>
       <ion-col>
         <ion-card class="card">
-          <img src="../../assets/couch2.png" />
-          <ion-card-header>
-            <ion-button (click)="addCouch()">Add Item</ion-button>
-          </ion-card-header>
+          <model-viewer 
+              src="../../assets/3d/chair-roomcraft/root.gltf" 
+              alt="chair" 
+              camera-controls>
+            </model-viewer>
+          <ion-card-content>
+            Chair
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+
+      <ion-col>
+        <ion-card class="card">
+           <model-viewer 
+              src="../../assets/3d/lamp-roomcraft/root.gltf" 
+              alt="chair" 
+              camera-controls>
+            </model-viewer>
+          <ion-card-content>
+            Lamp
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+
+      <ion-col>
+        <ion-card class="card">
+          <model-viewer 
+          src="../../assets/3d/sofa-roomcraft/root.gltf" 
+          alt="chair" 
+          camera-controls>
+        </model-viewer>
           <ion-card-content>
             Couch
           </ion-card-content>
         </ion-card>
       </ion-col>
+
       <ion-col>
-        <ion-card>
-          <img src="./madison.jpg" />
-          <ion-card-header>
-            <ion-card-title>Items</ion-card-title>
-          </ion-card-header>
+        <ion-card class="card">
+          <model-viewer 
+          src="../../assets/3d/table-roomcraft/root.gltf" 
+          alt="chair" 
+          camera-controls>
+        </model-viewer>
           <ion-card-content>
-           Lamp
+            Table
           </ion-card-content>
-        </ion-card>      
+        </ion-card>
       </ion-col>
+
+      
     </ion-row>
   </ion-grid>
+
 
 
 </ion-content>

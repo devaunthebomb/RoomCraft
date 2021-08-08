@@ -1,0 +1,9 @@
+  "INFO: Downloading Sumerian format scene....",
+  "INFO: Converting to glTF format....",
+  "INFO: Using glTF extension KHR_lights_punctual",
+  "INFO: Using glTF extension KHR_lights_punctual for object 'Key - Directional'",
+  "INFO: Using glTF extension KHR_lights_punctual for object 'Rim - Directional'",
+  "INFO: Converting classic material \"CHROME\" (e854976a4ce846f3bb67a04c9c1b95a7.material) to its PBR representation.",
+  "INFO: Converting classic material \"BLACK\" (58724878d12345e0a658cd34a9b47f7c.material) to its PBR representation.",
+  "INFO: Converting classic material \"WOOD_TOP\" (2438727bd658469ca34618e3b8183116.material) to its PBR representation.",
+  "INFO: Using glTF extension KHR_texture_transform for object 'wood_diff.jpg'"

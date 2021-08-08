@@ -12,7 +12,7 @@
     </ion-toolbar>
   </ion-header>
 
-  <ion-searchbar position="floating"></ion-searchbar>
+  <ion-searchbar type="text" placeholder="Search" position="floating"  showCancelButton="focus" [(ngModel)]="term.name"></ion-searchbar>
   <!-- <ion-icon name="bed-outline" size="large"></ion-icon> -->
   <div>
   <ion-title>
@@ -20,21 +20,16 @@
     <ion-icon name="logo-amazon"></ion-icon>
   </ion-title>
 
-  <ion-card (click)="move()" >
-    <img class="image" src="http://yolisgreenliving.com/wp-content/uploads/2015/12/No-Furniture_bedroom.jpg"/>
+  <ion-card (click)="move()" *ngFor="let shop of storeItems | filter:term.name">
+    <img class="image" src="{{shop.image}}"/>
+    <div class="product-details">
+    <ion-card-title>{{shop.name}}</ion-card-title>
+    <ion-card-subtitle>{{shop.description}}</ion-card-subtitle>
+    <ion-card-title color="success" class="card-title">{{shop.price}}</ion-card-title>
+  </div>
   </ion-card>
   </div>
-
-
-  <div>
-  <ion-title>
-    Target
-  </ion-title>
-  <ion-card >
-    <img class="image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRELOQR3-iH-jR4R1pFWOaLU8O1hrFAPYpI4g&usqp=CAU"/>
-  </ion-card>
-  </div>
-  <!-- <app-explore-container name="Tab 3 page"></app-explore-container> -->
+  
 </ion-content>
 
 <style>

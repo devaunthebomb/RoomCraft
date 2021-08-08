@@ -1,3 +1,17 @@
 .image{
     width: 100%;
 }
+
+ion-toolbar{
+    border: solid 1px transparent;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.card-title{
+    text-align: center;
+}
+
+.product-details{
+    padding: 5%;
+}

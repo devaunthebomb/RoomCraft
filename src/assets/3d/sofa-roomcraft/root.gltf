@@ -1,0 +1,438 @@
+{
+  "asset": {
+    "generator": "Amazon Sumerian",
+    "version": "2.0"
+  },
+  "cameras": [
+    {
+      "name": "Default Camera",
+      "type": "perspective",
+      "perspective": {
+        "aspectRatio": 1,
+        "yfov": 0.7853981633974483,
+        "zfar": 1000,
+        "znear": 1
+      }
+    }
+  ],
+  "nodes": [
+    {
+      "name": "Default Camera",
+      "camera": 0,
+      "rotation": [
+        -0.3020088438506518,
+        0.0010547633048627277,
+        0.0003341512103306434,
+        0.9533044812930085
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "translation": [
+        0.0067529077586586436,
+        2.1492600129589596,
+        3.051665391481116
+      ]
+    },
+    {
+      "name": "Key - Directional",
+      "extensions": {
+        "KHR_lights_punctual": {
+          "light": 0
+        }
+      },
+      "rotation": [
+        -0.0948595598902012,
+        0.11955889871169392,
+        -0.14019607206387738,
+        0.9782905473396666
+      ],
+      "scale": [
+        0.9999998569971704,
+        0.9999998569971704,
+        0.9999998569971704
+      ],
+      "translation": [
+        3.840765953063965,
+        5.725151062011719,
+        6.723899841308594
+      ]
+    },
+    {
+      "name": "Rim - Directional",
+      "extensions": {
+        "KHR_lights_punctual": {
+          "light": 1
+        }
+      },
+      "rotation": [
+        -0.007935453473895075,
+        0.936498758480699,
+        0.34801447925863915,
+        0.042344139719820297
+      ],
+      "scale": [
+        1.0000002646568553,
+        1.0000002646568553,
+        1.0000002646568553
+      ],
+      "translation": [
+        4.528846740722656,
+        9.009954452514648,
+        -9.487277030944824
+      ]
+    },
+    {
+      "name": "Default  Dynamic Lights",
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "children": [
+        1,
+        2
+      ]
+    },
+    {
+      "name": "B0728NWFCG_B0728NWFCG_And_Cards",
+      "mesh": 0,
+      "rotation": [
+        0,
+        -0.7095128055327882,
+        0,
+        0.7046925420245286
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "translation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "B0728NWFCG_low.obj_root",
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "children": [
+        4
+      ]
+    },
+    {
+      "name": "B0728NWFCG_low.obj",
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        0.01,
+        0.01,
+        0.01
+      ],
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "children": [
+        5
+      ]
+    }
+  ],
+  "extensions": {
+    "KHR_lights_punctual": {
+      "lights": [
+        {
+          "name": "Key - Directional",
+          "color": [
+            0.92477783203125,
+            0.8875688601181507,
+            0.856960791015625
+          ],
+          "intensity": 1,
+          "type": "directional"
+        },
+        {
+          "name": "Rim - Directional",
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "intensity": 1,
+          "type": "directional"
+        }
+      ]
+    }
+  },
+  "extensionsUsed": [
+    "KHR_lights_punctual"
+  ],
+  "buffers": [
+    {
+      "byteLength": 5231928,
+      "uri": "d7e76451336e143b3585869e29990fcf1e7eacad.bin"
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteOffset": 0,
+      "byteLength": 580584,
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 1743420,
+      "byteLength": 775224,
+      "byteStride": 8,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 2518644,
+      "byteLength": 1550448,
+      "byteStride": 16,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 580584,
+      "byteLength": 1162836,
+      "byteStride": 12,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 4069092,
+      "byteLength": 1162836,
+      "byteStride": 12,
+      "target": 34962
+    }
+  ],
+  "accessors": [
+    {
+      "bufferView": 0,
+      "byteOffset": 0,
+      "componentType": 5125,
+      "count": 145146,
+      "max": [
+        96902
+      ],
+      "min": [
+        0
+      ],
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 0,
+      "componentType": 5126,
+      "count": 96903,
+      "max": [
+        1,
+        0.9744859933853149
+      ],
+      "min": [
+        0,
+        0
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 0,
+      "componentType": 5126,
+      "count": 96903,
+      "max": [
+        1,
+        0.9999998211860657,
+        0.9999994039535522,
+        1
+      ],
+      "min": [
+        -0.9999714493751526,
+        -0.9999976754188538,
+        -0.9999998211860657,
+        -1
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 3,
+      "byteOffset": 0,
+      "componentType": 5126,
+      "count": 96903,
+      "max": [
+        45.209632873535156,
+        63.724239349365234,
+        83.6517333984375
+      ],
+      "min": [
+        -48.15194320678711,
+        0.39395999908447266,
+        -83.37689208984375
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 4,
+      "byteOffset": 0,
+      "componentType": 5126,
+      "count": 96903,
+      "max": [
+        1,
+        1,
+        1
+      ],
+      "min": [
+        -1,
+        -1,
+        -1
+      ],
+      "type": "VEC3"
+    }
+  ],
+  "meshes": [
+    {
+      "name": "2",
+      "primitives": [
+        {
+          "attributes": {
+            "TEXCOORD_0": 1,
+            "TANGENT": 2,
+            "POSITION": 3,
+            "NORMAL": 4
+          },
+          "indices": 0,
+          "mode": 4,
+          "material": 0
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "uri": "Base_Color.png"
+    },
+    {
+      "uri": "B07124WQLW_low_blinn1SG_Normal.png"
+    },
+    {
+      "uri": "B07124WQLW_low_blinn1SG_Height.png"
+    }
+  ],
+  "samplers": [
+    {
+      "name": "Base_Color.png",
+      "magFilter": 9729,
+      "minFilter": 9987,
+      "wrapS": 10497,
+      "wrapT": 10497
+    },
+    {
+      "name": "B07124WQLW_low_blinn1SG_Normal.png",
+      "magFilter": 9729,
+      "minFilter": 9987,
+      "wrapS": 10497,
+      "wrapT": 10497
+    },
+    {
+      "name": "B07124WQLW_low_blinn1SG_Height.png",
+      "magFilter": 9729,
+      "minFilter": 9987,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "textures": [
+    {
+      "name": "Base_Color.png",
+      "source": 0,
+      "sampler": 0
+    },
+    {
+      "name": "B07124WQLW_low_blinn1SG_Normal.png",
+      "source": 1,
+      "sampler": 1
+    },
+    {
+      "name": "B07124WQLW_low_blinn1SG_Height.png",
+      "source": 2,
+      "sampler": 2
+    }
+  ],
+  "materials": [
+    {
+      "name": "B0728NWFCG_B0728NWFCG_And_CardsMat",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.7933333333333333,
+          0.7933333333333333,
+          0.7933333333333333,
+          1
+        ],
+        "baseColorTexture": {
+          "index": 0
+        },
+        "roughnessFactor": 0.996,
+        "metallicRoughnessTexture": {
+          "index": 2
+        }
+      },
+      "normalTexture": {
+        "index": 1,
+        "scale": 1
+      },
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "name": "Sofa",
+      "nodes": [
+        0,
+        3,
+        6
+      ]
+    }
+  ],
+  "scene": 0
+}

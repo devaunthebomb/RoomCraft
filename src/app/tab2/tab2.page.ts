@@ -16,8 +16,6 @@ import { CameraPhoto } from '@capacitor/camera';
 })
 
 export class Tab2Page {
-  public htmlToAdd = "";
-
   savePicture(cameraPhoto: CameraPhoto) { }
 
   constructor(public photoService: PhotoService, private router: Router, private dataService: DataService, public alertCtrl: AlertController) { }
@@ -56,13 +54,5 @@ export class Tab2Page {
     }); 
     await confirm.present(); 
     } 
-
-    addCouch(){
-      this.htmlToAdd = '<img src="../../assets/couch2.png" />'
-    }
-
-
-
-
 }
 

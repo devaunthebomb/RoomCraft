@@ -6,9 +6,6 @@
 //     --ion-item-background: #B4A0FF;
 // }
 
-ion-card-header{
-    background-color: #B4A0FF;
-}
 ion-list{
     background-color: #B4A0FF;
 }
@@ -17,4 +14,16 @@ ion-list{
     display: block;
     margin: auto;
     width: 70%;
+}
+
+ion-toolbar{
+    border: solid 1px transparent;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+ion-tab-bar{
+    border: solid 1px transparent;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
 }

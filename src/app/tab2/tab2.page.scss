@@ -12,6 +12,10 @@
     float: left;
 }
 
+.card{
+    float: right;
+}
+
 // for dragging box
 .example-box {
     width: 30%;
@@ -39,3 +43,53 @@
   //               0 3px 14px 2px rgba(0, 0, 0, 0.12);
   // }
   
+
+ ion-toolbar{
+    border: solid 1px transparent;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.button-container{
+    width: 100%;
+    padding: 1%;
+    text-align: center;
+    padding-top: 3%;
+}
+
+// .single-button-container{
+//     border: dashed;
+//     color: lightgreen;
+//     // width: 5%;
+//     // height: auto;
+//     margin: 6%;
+//     display: inline;
+// }
+
+#camera-button{
+    // width: 5%;
+    // height: auto;
+    display: inline;
+    margin-right: 5%;
+}
+
+#file-button{
+    // width: 5%;
+    // height: auto;
+    display: inline;
+}
+
+.image-container{
+    border: solid;
+    color: mediumpurple;
+    margin-top: 5%;
+    // #myImage{
+    //     width: auto;
+    // }
+}
+
+model-viewer{
+    border: dotted;
+    color: cyan;
+}
+
