@@ -2,12 +2,14 @@ import { Component } from '@angular/core';
 import { PhotoService } from '../services/photo.service';
 import {DataService} from '../services/data.service'
 import { AlertController } from '@ionic/angular';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser'
 // import { FileTransfer, FileUploadOptions, FileTransferObject } from '@ionic-native/file-transfer/ngx';
 // import { File } from '@ionic-native/file';
 
 
 import { Router } from '@angular/router';
-import { CameraPhoto } from '@capacitor/camera';
+import { CameraPhoto, CameraResultType, CameraSource } from '@capacitor/camera';
+
 
 @Component({
   selector: 'app-tab2',
@@ -17,7 +19,10 @@ import { CameraPhoto } from '@capacitor/camera';
 
 export class Tab2Page {
   savePicture(cameraPhoto: CameraPhoto) { }
-
+  public htmlToAdd = ''
+  public htmlToAdd2 = ''
+  public htmlToAdd3 = ''
+  public htmlToAdd4 = ''
   constructor(public photoService: PhotoService, private router: Router, private dataService: DataService, public alertCtrl: AlertController) { }
 
   addPhotoToGallery() {
@@ -54,5 +59,38 @@ export class Tab2Page {
     }); 
     await confirm.present(); 
     } 
+
+    addChair(){
+      this.htmlToAdd = '<model-viewer src="../../assets/3d/chair-roomcraft/root.gltf" alt="chair"  camera-controls> </model-viewer>'
+    }
+
+    addLamp(){
+      this.htmlToAdd2 = '<model-viewer src="../../assets/3d/lamp-roomcraft/root.gltf" alt="chair" camera-controls> </model-viewer>'
+    }
+
+    addCouch(){
+      this.htmlToAdd3 = '<model-viewer src="../../assets/3d/sofa-roomcraft/root.gltf" alt="chair" camera-controls> </model-viewer>'
+    }
+
+    addTable(){
+      this.htmlToAdd4 = '<model-viewer src="../../assets/3d/table-roomcraft/root.gltf" alt="chair" camera-controls> </model-viewer>'
+    }
+    
+    deleteChair(){
+      this.htmlToAdd = ''
+    }
+
+    deleteLamp(){
+      this.htmlToAdd2 = ''
+    }
+
+    deleteCouch(){
+      this.htmlToAdd3 = ''
+    }
+
+    deleteTable(){
+      this.htmlToAdd4 = ''
+    }
+
 }
 

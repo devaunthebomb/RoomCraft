@@ -19,7 +19,6 @@
   <ion-button (click)="addPhotoToGallery()"><ion-icon style="margin-right: 5%;"name="camera"></ion-icon> Take Photo</ion-button>
   </div>
   <div id="file-button">
-  <ion-button><ion-icon style="margin-right: 7%;"name="images"></ion-icon>Add File</ion-button>
   </div>
 </div>
 
@@ -34,17 +33,42 @@
   </section> -->
 
   <!--displaying picture-->
+
+  <!-- <div class="example-boundary">
+    <div class="example-box" cdkDragBoundary=".example-boundary" cdkDrag>
+      I can only be dragged within the dotted container
+    </div>
+  </div> -->
+
   <ion-grid>
     <ion-row>
       <ion-col *ngFor='let photo of photoService.photos'>
-        <div class="picture-container">
-            <!-- <div class="one" [innerHtml]="htmlToAdd"></div>
-          </div> --> 
-          <div class="image-container">
-          <ion-img id="myImage" [src]='photo.webViewPath' class="Photo">
-          </ion-img>
+          <div class="example-boundary">
+              <div class="box">
+              <ion-img id="myImage" [src]='photo.webViewPath' >
+              </ion-img>
+            </div>
+            <!-- this is where the 3d models are spawned -->
+            <div class="spawn-points">
+            <div class="example-box" cdkDragBoundary=".example-boundary" cdkDrag>
+              <div id="chair" [innerHtml]="htmlToAdd | htmlHandle">
+              </div>
+            </div>
+            <div class="example-box" cdkDragBoundary=".example-boundary" cdkDrag>
+              <div id="lamp" [innerHtml]="htmlToAdd2 | htmlHandle">
+              </div> 
+            </div>
+            <div class="example-box" cdkDragBoundary=".example-boundary" cdkDrag>
+              <div id="couch" [innerHtml]="htmlToAdd3 | htmlHandle">
+              </div>
+            </div>
+            <div class="example-box" cdkDragBoundary=".example-boundary" cdkDrag>
+              <div id="table" [innerHtml]="htmlToAdd4 | htmlHandle">
+              </div>
+              </div>
+            </div>
+              <!-- This is where 3d model spawns end -->
           </div>
-        </div>
       </ion-col>
     </ion-row>
   </ion-grid>
@@ -58,63 +82,93 @@
 
 
    <br>
-  <ion-grid>
-    <ion-row>
-      <ion-col>
-        <ion-card class="card">
+      
+       <ion-card> 
           <model-viewer 
               src="../../assets/3d/chair-roomcraft/root.gltf" 
               alt="chair" 
-              camera-controls>
-            </model-viewer>
-          <ion-card-content>
-            Chair
+              camera-controls
+              auto-rotate> 
+          </model-viewer>
+          <ion-card-header>
+            <ion-card-title>
+              Chair
+            </ion-card-title>
+          </ion-card-header>
+           <ion-card-content>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           </ion-card-content>
+        <div class="action-button">
+          <ion-button (click)="addChair()">Add</ion-button>
+          <ion-button color="danger"(click)="deleteChair()">Remove</ion-button>
+        </div>
         </ion-card>
-      </ion-col>
+ 
+      
 
-      <ion-col>
         <ion-card class="card">
            <model-viewer 
               src="../../assets/3d/lamp-roomcraft/root.gltf" 
               alt="chair" 
-              camera-controls>
+              camera-controls
+              auto-rotate>
             </model-viewer>
-          <ion-card-content>
+          <ion-card-title>
             Lamp
+          </ion-card-title>
+          <ion-card-content>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           </ion-card-content>
+        <div class="action-button">
+          <ion-button (click)="addLamp()">Add</ion-button>
+          <ion-button color="danger"(click)="deleteLamp()">Remove</ion-button>
+        </div>
         </ion-card>
-      </ion-col>
-
-      <ion-col>
+  
+  
+  
         <ion-card class="card">
           <model-viewer 
           src="../../assets/3d/sofa-roomcraft/root.gltf" 
           alt="chair" 
-          camera-controls>
+          camera-controls
+          auto-rotate>
         </model-viewer>
-          <ion-card-content>
+          <ion-card-title>
             Couch
+          </ion-card-title>
+          <ion-card-content>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           </ion-card-content>
+        <div class="action-button">
+          <ion-button (click)="addCouch()">Add</ion-button>
+          <ion-button color="danger"(click)="deleteCouch()">Remove</ion-button>
+        </div>
         </ion-card>
-      </ion-col>
 
-      <ion-col>
+ 
+
+
         <ion-card class="card">
           <model-viewer 
           src="../../assets/3d/table-roomcraft/root.gltf" 
           alt="chair" 
-          camera-controls>
+          camera-controls 
+          auto-rotate
+          annotaions="">
         </model-viewer>
-          <ion-card-content>
+          <ion-card-title>
             Table
+          </ion-card-title>
+          <ion-card-content>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           </ion-card-content>
+        <div class="action-button">
+          <ion-button (click)="addTable()">Add</ion-button>
+          <ion-button color="danger"(click)="deleteTable">Remove</ion-button>
+        </div>
         </ion-card>
-      </ion-col>
-
-      
-    </ion-row>
-  </ion-grid>
+  
 
 
 

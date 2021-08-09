@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { DragDropModule } from '@angular/cdk/drag-drop'
 import { Tab2Page } from './tab2.page';
 import { ExploreContainerComponentModule } from '../explore-container/explore-container.module';
+import { HtmlHandlePipe } from '../services/html-handle.pipe'
 
 import { Tab2PageRoutingModule } from './tab2-routing.module';
 
@@ -18,7 +19,7 @@ import { Tab2PageRoutingModule } from './tab2-routing.module';
     Tab2PageRoutingModule,
     DragDropModule,
   ],
-  declarations: [Tab2Page],
+  declarations: [Tab2Page, HtmlHandlePipe],
   
 })
 export class Tab2PageModule {}

@@ -1,6 +1,6 @@
-.Photo{
-   height: 30vh;
-}
+// .Photo{
+//    height: 30vh;
+// }
 
 // .picture-container{
 //     height: 300px;
@@ -12,43 +12,77 @@
     float: left;
 }
 
-.card{
-    float: right;
-}
+
 
 // for dragging box
+// .example-box {
+//     width: 30%;
+//     height: 200px;
+//     // border: solid 1px #ccc;
+//     color: rgba(0, 0, 0, 0.87);
+//     cursor: move;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     text-align: center;
+//     background: transparent;
+//     border-radius: 4px;
+//     position: relative;
+//     z-index: 1;
+//     transition: box-shadow 200ms cubic-bezier(0, 0, 0.2, 1);
+//     // box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2),
+//     //             0 2px 2px 0 rgba(0, 0, 0, 0.14),
+//     //             0 1px 5px 0 rgba(0, 0, 0, 0.12);
+//   }
+  
+//   // .example-box:active {
+//   //   box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+//   //               0 8px 10px 1px rgba(0, 0, 0, 0.14),
+//   //               0 3px 14px 2px rgba(0, 0, 0, 0.12);
+//   // }
+  
+
+//  ion-toolbar{
+//     border: solid 1px transparent;
+//     border-bottom-left-radius: 15px;
+//     border-bottom-right-radius: 15px;
+// }
 .example-box {
-    width: 30%;
-    height: 200px;
-    // border: solid 1px #ccc;
+    width: 100px;
+    height: 100px;
+    border: solid 1px #ccc;
     color: rgba(0, 0, 0, 0.87);
     cursor: move;
-    display: flex;
+    display: inline-flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: transparent;
+    // background: #fff;
     border-radius: 4px;
+    margin-right: 25px;
     position: relative;
     z-index: 1;
+    box-sizing: border-box;
+    padding: 10px;
     transition: box-shadow 200ms cubic-bezier(0, 0, 0.2, 1);
-    // box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2),
-    //             0 2px 2px 0 rgba(0, 0, 0, 0.14),
-    //             0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2),
+                0 2px 2px 0 rgba(0, 0, 0, 0.14),
+              0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  }  
+  
+  .example-box:active {
+     box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+               0 8px 10px 1px rgba(0, 0, 0, 0.14),
+                0 3px 14px 2px rgba(0, 0, 0, 0.12);
   }
   
-  // .example-box:active {
-  //   box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
-  //               0 8px 10px 1px rgba(0, 0, 0, 0.14),
-  //               0 3px 14px 2px rgba(0, 0, 0, 0.12);
-  // }
-  
-
- ion-toolbar{
-    border: solid 1px transparent;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-}
+  .example-boundary {
+    width: 400px;
+    height: 400px;
+    padding-top: 10px;
+    max-width: 100%;
+    // border: dotted #ccc 2px;
+  }
 
 .button-container{
     width: 100%;
@@ -91,5 +125,39 @@
 model-viewer{
     border: dotted;
     color: cyan;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
 }
+
+.picture-container{
+    border: dotted;
+    color: orange;
+    width: 100%;
+    height: 300px;
+}
+
+// #myImage{
+//     width: 400px;
+//     height: 400px;
+    
+// }
+
+ion-img{
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    .box{
+        height: 300px;
+    }
+
+}
+
+.action-button{
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+
 
