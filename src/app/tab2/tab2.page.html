@@ -16,10 +16,10 @@
 
 <div class="button-container">
   <div id="camera-button">
-  <ion-button (click)="addPhotoToGallery()"><ion-icon style="margin-right: 5%;"name="camera"></ion-icon> Take Photo</ion-button>
+  <ion-button (click)="getPicture()"><ion-icon style="margin-right: 5%;"name="camera"></ion-icon> Take Photo</ion-button>
   </div>
-  <div id="file-button">
-  </div>
+
+  <input type="file" #filePicker (change)="onChooseFile($event)"/>
 </div>
 
 
@@ -42,11 +42,10 @@
 
   <ion-grid>
     <ion-row>
-      <ion-col *ngFor='let photo of photoService.photos'>
+      <ion-col>
           <div class="example-boundary">
-              <div class="box">
-              <ion-img id="myImage" [src]='photo.webViewPath' >
-              </ion-img>
+            <div *ngIf="photo" class="box">
+              <img id="myImage" [src]='photo'>
             </div>
             <!-- this is where the 3d models are spawned -->
             <div class="spawn-points">

@@ -1,14 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
 import { PhotoService } from '../services/photo.service';
 import {DataService} from '../services/data.service'
 import { AlertController } from '@ionic/angular';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser'
+import { Capacitor } from '@capacitor/core'
 // import { FileTransfer, FileUploadOptions, FileTransferObject } from '@ionic-native/file-transfer/ngx';
 // import { File } from '@ionic-native/file';
 
 
 import { Router } from '@angular/router';
-import { CameraPhoto, CameraResultType, CameraSource } from '@capacitor/camera';
+import { CameraPhoto, CameraResultType, CameraSource, Camera } from '@capacitor/camera';
+
+
 
 
 @Component({
@@ -18,16 +21,21 @@ import { CameraPhoto, CameraResultType, CameraSource } from '@capacitor/camera';
 })
 
 export class Tab2Page {
-  savePicture(cameraPhoto: CameraPhoto) { }
+  @ViewChild('filePicker',{static: false}) filePickerRef: ElementRef<HTMLInputElement>;
+  public photo: SafeResourceUrl;
+  
+  // savePicture(cameraPhoto: CameraPhoto) { }
   public htmlToAdd = ''
   public htmlToAdd2 = ''
   public htmlToAdd3 = ''
   public htmlToAdd4 = ''
-  constructor(public photoService: PhotoService, private router: Router, private dataService: DataService, public alertCtrl: AlertController) { }
 
-  addPhotoToGallery() {
-  this.photoService.addNewToGallery();
-  } 
+  listOfImages = [] 
+  constructor(public photoService: PhotoService, private router: Router, private dataService: DataService, public alertCtrl: AlertController, public domsanitizer: DomSanitizer) { }
+
+  // addPhotoToGallery() {
+  // this.photoService.addNewToGallery();
+  // } 
 
   //to navagate to home page and save project
   moveToHome() {
@@ -59,7 +67,8 @@ export class Tab2Page {
     }); 
     await confirm.present(); 
     } 
-
+    
+    // start of adding and removing items
     addChair(){
       this.htmlToAdd = '<model-viewer src="../../assets/3d/chair-roomcraft/root.gltf" alt="chair"  camera-controls> </model-viewer>'
     }
@@ -91,6 +100,39 @@ export class Tab2Page {
     deleteTable(){
       this.htmlToAdd4 = ''
     }
+    //end of adding and removing items
+
+    async getPicture() {
+      if(!Capacitor.isPluginAvailable('Camera')) {
+        this.filePickerRef.nativeElement.click();
+        return;
+      } 
+      const image = await Camera.getPhoto({
+        quality: 100,
+        width: 400,
+        allowEditing: false,
+        resultType: CameraResultType.DataUrl,
+        source: CameraSource.Prompt
+      });
+      this.photo = this.domsanitizer.bypassSecurityTrustResourceUrl(image && image.dataUrl)
+    }
+
+    onFileChoose(event: Event) {
+      const file = (event.target as HTMLInputElement).files[0]
+      const pattern = /image-*/;
+      const reader = new FileReader();
+
+      if(!file.type.match(pattern)){
+        console.log('File not supported')
+        return;
+      }
+      reader.onload = ()=>{
+        this.photo = reader.result.toString();
+      }
+      reader.readAsDataURL(file);
+    }
+
+
 
 }
 
